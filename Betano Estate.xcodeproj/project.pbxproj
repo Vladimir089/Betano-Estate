@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		1510DBB22CA5A09300AF18C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBB12CA5A09300AF18C8 /* AppDelegate.swift */; };
 		1510DBB42CA5A09300AF18C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBB32CA5A09300AF18C8 /* SceneDelegate.swift */; };
-		1510DBB62CA5A09300AF18C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBB52CA5A09300AF18C8 /* ViewController.swift */; };
 		1510DBB92CA5A09300AF18C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1510DBB72CA5A09300AF18C8 /* Main.storyboard */; };
 		1510DBBB2CA5A09500AF18C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1510DBBA2CA5A09500AF18C8 /* Assets.xcassets */; };
 		1510DBBE2CA5A09500AF18C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1510DBBC2CA5A09500AF18C8 /* LaunchScreen.storyboard */; };
+		1510DBC82CA5A13400AF18C8 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBC72CA5A13400AF18C8 /* LoadViewController.swift */; };
+		1510DBCB2CA5A2BE00AF18C8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1510DBCA2CA5A2BE00AF18C8 /* SnapKit */; };
+		1510DBCE2CA5A2C800AF18C8 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1510DBCD2CA5A2C800AF18C8 /* CombineCocoa */; };
+		1510DBD12CA5A86C00AF18C8 /* UserOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBD02CA5A86C00AF18C8 /* UserOnboardingViewController.swift */; };
+		1510DBD42CA5B04400AF18C8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBD32CA5B04400AF18C8 /* TabBarViewController.swift */; };
+		1510DBD72CA5B10200AF18C8 /* MainHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBD62CA5B10200AF18C8 /* MainHomePageViewController.swift */; };
+		1510DBD92CA5B7E300AF18C8 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBD82CA5B7E300AF18C8 /* HomeModels.swift */; };
+		1510DBDB2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBDA2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift */; };
+		1510DBDD2CA5E5BC00AF18C8 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBDC2CA5E5BC00AF18C8 /* AddTransactionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1510DBAE2CA5A09300AF18C8 /* Betano Estate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Betano Estate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1510DBB12CA5A09300AF18C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1510DBB32CA5A09300AF18C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1510DBB52CA5A09300AF18C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1510DBB82CA5A09300AF18C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1510DBBA2CA5A09500AF18C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1510DBBD2CA5A09500AF18C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1510DBBF2CA5A09500AF18C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1510DBC72CA5A13400AF18C8 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
+		1510DBD02CA5A86C00AF18C8 /* UserOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOnboardingViewController.swift; sourceTree = "<group>"; };
+		1510DBD32CA5B04400AF18C8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1510DBD62CA5B10200AF18C8 /* MainHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomePageViewController.swift; sourceTree = "<group>"; };
+		1510DBD82CA5B7E300AF18C8 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		1510DBDA2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCurrentBalanceViewController.swift; sourceTree = "<group>"; };
+		1510DBDC2CA5E5BC00AF18C8 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1510DBCE2CA5A2C800AF18C8 /* CombineCocoa in Frameworks */,
+				1510DBCB2CA5A2BE00AF18C8 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +72,61 @@
 		1510DBB02CA5A09300AF18C8 /* Betano Estate */ = {
 			isa = PBXGroup;
 			children = (
-				1510DBB12CA5A09300AF18C8 /* AppDelegate.swift */,
-				1510DBB32CA5A09300AF18C8 /* SceneDelegate.swift */,
-				1510DBB52CA5A09300AF18C8 /* ViewController.swift */,
-				1510DBB72CA5A09300AF18C8 /* Main.storyboard */,
-				1510DBBA2CA5A09500AF18C8 /* Assets.xcassets */,
-				1510DBBC2CA5A09500AF18C8 /* LaunchScreen.storyboard */,
+				1510DBD52CA5B0D400AF18C8 /* HomePage */,
+				1510DBD22CA5B02900AF18C8 /* TabBar */,
+				1510DBC62CA5A0B600AF18C8 /* Support */,
+				1510DBC52CA5A0AA00AF18C8 /* Onboarding */,
 				1510DBBF2CA5A09500AF18C8 /* Info.plist */,
 			);
 			path = "Betano Estate";
+			sourceTree = "<group>";
+		};
+		1510DBC52CA5A0AA00AF18C8 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1510DBCF2CA5A85E00AF18C8 /* User */,
+				1510DBC72CA5A13400AF18C8 /* LoadViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1510DBC62CA5A0B600AF18C8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				1510DBB32CA5A09300AF18C8 /* SceneDelegate.swift */,
+				1510DBB72CA5A09300AF18C8 /* Main.storyboard */,
+				1510DBBA2CA5A09500AF18C8 /* Assets.xcassets */,
+				1510DBBC2CA5A09500AF18C8 /* LaunchScreen.storyboard */,
+				1510DBB12CA5A09300AF18C8 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1510DBCF2CA5A85E00AF18C8 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				1510DBD02CA5A86C00AF18C8 /* UserOnboardingViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		1510DBD22CA5B02900AF18C8 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1510DBD32CA5B04400AF18C8 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1510DBD52CA5B0D400AF18C8 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				1510DBD62CA5B10200AF18C8 /* MainHomePageViewController.swift */,
+				1510DBD82CA5B7E300AF18C8 /* HomeModels.swift */,
+				1510DBDA2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift */,
+				1510DBDC2CA5E5BC00AF18C8 /* AddTransactionViewController.swift */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +145,10 @@
 			dependencies = (
 			);
 			name = "Betano Estate";
+			packageProductDependencies = (
+				1510DBCA2CA5A2BE00AF18C8 /* SnapKit */,
+				1510DBCD2CA5A2C800AF18C8 /* CombineCocoa */,
+			);
 			productName = "Betano Estate";
 			productReference = 1510DBAE2CA5A09300AF18C8 /* Betano Estate.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +177,10 @@
 				Base,
 			);
 			mainGroup = 1510DBA52CA5A09300AF18C8;
+			packageReferences = (
+				1510DBC92CA5A2BE00AF18C8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1510DBCC2CA5A2C800AF18C8 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+			);
 			productRefGroup = 1510DBAF2CA5A09300AF18C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +208,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1510DBB62CA5A09300AF18C8 /* ViewController.swift in Sources */,
+				1510DBC82CA5A13400AF18C8 /* LoadViewController.swift in Sources */,
 				1510DBB22CA5A09300AF18C8 /* AppDelegate.swift in Sources */,
+				1510DBD12CA5A86C00AF18C8 /* UserOnboardingViewController.swift in Sources */,
+				1510DBD42CA5B04400AF18C8 /* TabBarViewController.swift in Sources */,
+				1510DBD72CA5B10200AF18C8 /* MainHomePageViewController.swift in Sources */,
 				1510DBB42CA5A09300AF18C8 /* SceneDelegate.swift in Sources */,
+				1510DBDD2CA5E5BC00AF18C8 /* AddTransactionViewController.swift in Sources */,
+				1510DBD92CA5B7E300AF18C8 /* HomeModels.swift in Sources */,
+				1510DBDB2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +370,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Betano Estate/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Benato Estate";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +383,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "k.Betano-Estate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,11 +401,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Betano Estate/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Benato Estate";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +414,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "k.Betano-Estate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,6 +445,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1510DBC92CA5A2BE00AF18C8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		1510DBCC2CA5A2C800AF18C8 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1510DBCA2CA5A2BE00AF18C8 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1510DBC92CA5A2BE00AF18C8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1510DBCD2CA5A2C800AF18C8 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1510DBCC2CA5A2C800AF18C8 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1510DBA62CA5A09300AF18C8 /* Project object */;
 }

@@ -7,6 +7,8 @@
 
 import UIKit
 
+var isBet = false
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
