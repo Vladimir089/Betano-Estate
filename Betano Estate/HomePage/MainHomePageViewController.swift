@@ -41,7 +41,10 @@ class MainHomePageViewController: UIViewController {
         backButton.title = ""
         navigationItem.backBarButtonItem = backButton
         
+        
     }
+    
+   
 
 
     override func viewDidLoad() {
@@ -52,6 +55,7 @@ class MainHomePageViewController: UIViewController {
         checkItems()
         createInterface()
         subscribe()
+
     }
     
     private func checkItems() {
@@ -98,6 +102,7 @@ class MainHomePageViewController: UIViewController {
                 sortedHomeArr.append(i)
             }
         }
+        mainCollection?.reloadData()
     }
     
     private func loadAthleteArrFromFile() -> [transactions]? {
@@ -135,7 +140,7 @@ class MainHomePageViewController: UIViewController {
         mainCollection?.snp.makeConstraints({ make in
             make.left.right.equalToSuperview().inset(15)
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.bottom.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         })
     }
     

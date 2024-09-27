@@ -11,7 +11,10 @@ var propertiesArr: [Home] = []
 
 class TabBarViewController: UITabBarController {
     
-    lazy var homePage = MainHomePageViewController()
+    var propertiesPage = PropertiesViewController()
+    var homePage = MainHomePageViewController()
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,6 +28,8 @@ class TabBarViewController: UITabBarController {
         setting()
         setVC()
     }
+    
+   
     
 
     func setting() {
@@ -40,10 +45,17 @@ class TabBarViewController: UITabBarController {
     }
     
     func setVC() {
+        
+        let propertiesVCTabItem = UITabBarItem(title: nil, image: .properties.resize(targetSize: CGSize(width: 27, height: 27)), tag: 0)
+        propertiesPage.tabBarItem = propertiesVCTabItem
+        
+        
         let homeVCTabItem = UITabBarItem(title: nil, image: .home.resize(targetSize: CGSize(width: 24, height: 24)), tag: 0)
         homePage.tabBarItem = homeVCTabItem
 
-        viewControllers = [UINavigationController(rootViewController: homePage)]
+        homePage.watchListPubliser = propertiesPage.watchListPubliser
+
+        viewControllers = [UINavigationController(rootViewController: homePage), UINavigationController(rootViewController: propertiesPage)]
         
         hideTitle()
     }

@@ -21,6 +21,7 @@
 		1510DBD92CA5B7E300AF18C8 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBD82CA5B7E300AF18C8 /* HomeModels.swift */; };
 		1510DBDB2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBDA2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift */; };
 		1510DBDD2CA5E5BC00AF18C8 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBDC2CA5E5BC00AF18C8 /* AddTransactionViewController.swift */; };
+		1510DBE02CA6DDE200AF18C8 /* PropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBDF2CA6DDE200AF18C8 /* PropertiesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1510DBD82CA5B7E300AF18C8 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		1510DBDA2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCurrentBalanceViewController.swift; sourceTree = "<group>"; };
 		1510DBDC2CA5E5BC00AF18C8 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		1510DBDF2CA6DDE200AF18C8 /* PropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		1510DBB02CA5A09300AF18C8 /* Betano Estate */ = {
 			isa = PBXGroup;
 			children = (
+				1510DBDE2CA6DDCB00AF18C8 /* Properties */,
 				1510DBD52CA5B0D400AF18C8 /* HomePage */,
 				1510DBD22CA5B02900AF18C8 /* TabBar */,
 				1510DBC62CA5A0B600AF18C8 /* Support */,
@@ -127,6 +130,14 @@
 				1510DBDC2CA5E5BC00AF18C8 /* AddTransactionViewController.swift */,
 			);
 			path = HomePage;
+			sourceTree = "<group>";
+		};
+		1510DBDE2CA6DDCB00AF18C8 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				1510DBDF2CA6DDE200AF18C8 /* PropertiesViewController.swift */,
+			);
+			path = Properties;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 				1510DBDD2CA5E5BC00AF18C8 /* AddTransactionViewController.swift in Sources */,
 				1510DBD92CA5B7E300AF18C8 /* HomeModels.swift in Sources */,
 				1510DBDB2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift in Sources */,
+				1510DBE02CA6DDE200AF18C8 /* PropertiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
