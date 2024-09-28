@@ -83,6 +83,7 @@ class MainHomePageViewController: UIViewController {
         watchListPubliser?
             .sink { _ in
                 self.sortHomeArr()
+                print("Home publicher is work")
             }
             .store(in: &cancellable)
         
@@ -97,6 +98,7 @@ class MainHomePageViewController: UIViewController {
     }
     
     private func sortHomeArr() {
+        sortedHomeArr.removeAll()
         for i in propertiesArr {
             if i.isLike == true {
                 sortedHomeArr.append(i)
@@ -337,9 +339,11 @@ extension MainHomePageViewController: UICollectionViewDelegate, UICollectionView
                     make.left.top.equalToSuperview()
                 }
                 if sortedHomeArr.count > 0 {
-                    //тут создаем таблицу на основе массива
+                    print("OK")
+                    //
                 } else {
                     let view = nilView(text: "watchlist")
+                    cell.backgroundColor = .white
                     cell.addSubview(view)
                     view.snp.makeConstraints { make in
                         make.left.right.bottom.equalToSuperview()

@@ -22,6 +22,7 @@
 		1510DBDB2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBDA2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift */; };
 		1510DBDD2CA5E5BC00AF18C8 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBDC2CA5E5BC00AF18C8 /* AddTransactionViewController.swift */; };
 		1510DBE02CA6DDE200AF18C8 /* PropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBDF2CA6DDE200AF18C8 /* PropertiesViewController.swift */; };
+		1510DBE22CA83E1900AF18C8 /* AddNewPropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBE12CA83E1900AF18C8 /* AddNewPropertyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		1510DBDA2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCurrentBalanceViewController.swift; sourceTree = "<group>"; };
 		1510DBDC2CA5E5BC00AF18C8 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		1510DBDF2CA6DDE200AF18C8 /* PropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewController.swift; sourceTree = "<group>"; };
+		1510DBE12CA83E1900AF18C8 /* AddNewPropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPropertyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				1510DBDF2CA6DDE200AF18C8 /* PropertiesViewController.swift */,
+				1510DBE12CA83E1900AF18C8 /* AddNewPropertyViewController.swift */,
 			);
 			path = Properties;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				1510DBC82CA5A13400AF18C8 /* LoadViewController.swift in Sources */,
 				1510DBB22CA5A09300AF18C8 /* AppDelegate.swift in Sources */,
 				1510DBD12CA5A86C00AF18C8 /* UserOnboardingViewController.swift in Sources */,
+				1510DBE22CA83E1900AF18C8 /* AddNewPropertyViewController.swift in Sources */,
 				1510DBD42CA5B04400AF18C8 /* TabBarViewController.swift in Sources */,
 				1510DBD72CA5B10200AF18C8 /* MainHomePageViewController.swift in Sources */,
 				1510DBB42CA5A09300AF18C8 /* SceneDelegate.swift in Sources */,

@@ -18,9 +18,9 @@ struct Home: Codable {
     var propertyType: String
     var annualReturn: String
     var occupancyRate: String
-    var photos: [Date]
+    var photos: [Data]
     
-    init(isLike: Bool, name: String, status: String, description: String, price: String, size: String, location: String, propertyType: String, annualReturn: String, occupancyRate: String, photos: [Date]) {
+    init(isLike: Bool, name: String, status: String, description: String, price: String, size: String, location: String, propertyType: String, annualReturn: String, occupancyRate: String, photos: [Data]) {
         self.isLike = isLike
         self.name = name
         self.status = status
