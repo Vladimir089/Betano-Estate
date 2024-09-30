@@ -243,8 +243,26 @@ class PropertiesViewController: UIViewController {
         }
         return view
     }
-
+    
+    private func changeLike(index: Int) {
+        let item = self.sortedProperties[index]
+        
+        let index = propertiesArr.firstIndex(where: { $0.name == item.name &&  $0.isLike == item.isLike &&  $0.annualReturn == item.annualReturn &&  $0.description == item.description &&  $0.location == item.location &&  $0.occupancyRate == item.occupancyRate &&  $0.price == item.price &&  $0.propertyType == item.propertyType &&  $0.size == item.size &&  $0.status == item.status &&  $0.photos == item.photos })
+        propertiesArr[index ?? 0].isLike.toggle()
+        
+        do {
+            let data = try JSONEncoder().encode(propertiesArr) //тут мкассив конвертируем в дату
+            try self.saveAthleteArrToFile(data: data)
+            self.isLocalUpdate = true
+            self.watchListPubliser.send(0)
+            self.changeCategory(category: self.segmentItems[self.segmentedControl.selectedSegmentIndex])
+        } catch {
+            print("Failed to encode or save athleteArr: \(error)")
+        }
+    }
+    
 }
+
 
 
 extension PropertiesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -356,20 +374,7 @@ extension PropertiesViewController: UICollectionViewDelegate, UICollectionViewDa
                 }
                 likeButton.tapPublisher
                     .sink { _ in
-                        let item = self.sortedProperties[indexPath.row]
-                        let index = propertiesArr.firstIndex(where: { $0.name == item.name &&  $0.isLike == item.isLike &&  $0.annualReturn == item.annualReturn &&  $0.description == item.description &&  $0.location == item.location &&  $0.occupancyRate == item.occupancyRate &&  $0.price == item.price &&  $0.propertyType == item.propertyType &&  $0.size == item.size &&  $0.status == item.status &&  $0.photos == item.photos })
-                        propertiesArr[index ?? 0].isLike.toggle()
-                      
-                        do {
-                            let data = try JSONEncoder().encode(propertiesArr) //тут мкассив конвертируем в дату
-                            try self.saveAthleteArrToFile(data: data)
-                            self.isLocalUpdate = true
-                            self.watchListPubliser.send(0)
-                            self.changeCategory(category: self.segmentItems[self.segmentedControl.selectedSegmentIndex])
-                        } catch {
-                            print("Failed to encode or save athleteArr: \(error)")
-                        }
-                        
+                        self.changeLike(index: indexPath.row)
                     }
                     .store(in: &cancellable)
                 
@@ -471,18 +476,14 @@ extension PropertiesViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //перенеси в окно детали
         if collectionView != collection {
-            let vc = AddNewPropertyViewController()
-            vc.publisher = self.watchListPubliser
-            vc.isNew = false
-            
+            let vc = DetailPropertiesViewController()
+            vc.publisher = watchListPubliser
             let item = sortedProperties[indexPath.row]
             let index = propertiesArr.firstIndex(where: { $0.name == item.name &&  $0.isLike == item.isLike &&  $0.annualReturn == item.annualReturn &&  $0.description == item.description &&  $0.location == item.location &&  $0.occupancyRate == item.occupancyRate &&  $0.price == item.price &&  $0.propertyType == item.propertyType &&  $0.size == item.size &&  $0.status == item.status &&  $0.photos == item.photos })
-            vc.oldIndex = index ?? 0
+            vc.index = index ?? 0
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

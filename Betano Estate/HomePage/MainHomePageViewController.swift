@@ -15,7 +15,7 @@ class MainHomePageViewController: UIViewController {
     lazy var cancellable = [AnyCancellable]()
     lazy var editBalancePublisher = PassthroughSubject<[String], Never>()
     lazy var transactionPublisher = PassthroughSubject<[transactions], Never>()
-    var watchListPubliser: PassthroughSubject<Any, Never>?        //ДЛЯ ОТСЛЕЖИВАНИЯ ЛАЙКА ЮЗЕРА/ СОЗДАТЬ И ИНИЦИАЛИЗИРОВАТЬ  НА  ВТОРОЙ СТРАНИЦЕ И ЧЕРЕЗ ТАББАР ПЕРЕДАТЬ СЮДА
+    var watchListPubliser: PassthroughSubject<Any, Never>? 
     
     //work
     var transactionArr: [transactions] = []
@@ -27,9 +27,9 @@ class MainHomePageViewController: UIViewController {
     private var transactionsCollection: UICollectionView?
     
     //balance
-    private lazy var currentBalance = "$0"
-    private lazy var earnedCash = "$0"
-    private lazy var spentCash = "$0"
+    private lazy var currentBalance = "0"
+    private lazy var earnedCash = "0"
+    private lazy var spentCash = "0"
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -83,6 +83,7 @@ class MainHomePageViewController: UIViewController {
         watchListPubliser?
             .sink { _ in
                 self.sortHomeArr()
+                self.watchListCollection?.reloadData()
                 print("Home publicher is work")
             }
             .store(in: &cancellable)
@@ -227,6 +228,10 @@ class MainHomePageViewController: UIViewController {
     
     private func delTransaction(index: Int) {
         transactionArr.remove(at: index)
+        saveToFile()
+    }
+    
+    private func saveToFile() {
         do {
             let data = try JSONEncoder().encode(transactionArr) //тут мкассив конвертируем в дату
             try saveAthleteArrToFile(data: data)
@@ -234,7 +239,6 @@ class MainHomePageViewController: UIViewController {
         } catch {
             print("Failed to encode or save athleteArr: \(error)")
         }
-        
     }
     
     private func saveAthleteArrToFile(data: Data) throws {
@@ -247,6 +251,26 @@ class MainHomePageViewController: UIViewController {
         }
     }
     
+    private func dislikeHome(index: Int) {
+        let item = sortedHomeArr[index]
+        
+        let index = propertiesArr.firstIndex(where: { $0.name == item.name &&  $0.isLike == item.isLike &&  $0.annualReturn == item.annualReturn &&  $0.description == item.description &&  $0.location == item.location &&  $0.occupancyRate == item.occupancyRate &&  $0.price == item.price &&  $0.propertyType == item.propertyType &&  $0.size == item.size &&  $0.status == item.status &&  $0.photos == item.photos })
+        
+        propertiesArr[index ?? 0].isLike = false
+        watchListPubliser?.send(0)
+        saveToFile()
+    }
+    
+    private func openDetailVC(index: Int) {
+        let item = sortedHomeArr[index]
+        
+        let index = propertiesArr.firstIndex(where: { $0.name == item.name &&  $0.isLike == item.isLike &&  $0.annualReturn == item.annualReturn &&  $0.description == item.description &&  $0.location == item.location &&  $0.occupancyRate == item.occupancyRate &&  $0.price == item.price &&  $0.propertyType == item.propertyType &&  $0.size == item.size &&  $0.status == item.status &&  $0.photos == item.photos })
+        
+        let vc = DetailPropertiesViewController()
+        vc.publisher = watchListPubliser
+        vc.index = index ?? 0
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 
@@ -339,8 +363,21 @@ extension MainHomePageViewController: UICollectionViewDelegate, UICollectionView
                     make.left.top.equalToSuperview()
                 }
                 if sortedHomeArr.count > 0 {
-                    print("OK")
-                    //
+                    let layout = UICollectionViewFlowLayout()
+                    watchListCollection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+                    watchListCollection?.backgroundColor = .white
+                    watchListCollection?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "123")
+                    watchListCollection?.delegate = self
+                    watchListCollection?.dataSource = self
+                    watchListCollection?.layer.cornerRadius = 24
+                    watchListCollection?.showsHorizontalScrollIndicator = false
+                    layout.scrollDirection = .horizontal
+                    cell.addSubview(watchListCollection!)
+                    watchListCollection?.snp.makeConstraints { make in
+                        make.left.right.bottom.equalToSuperview()
+                        make.top.equalTo(topLabel.snp.bottom).inset(-10)
+                    }
+                    
                 } else {
                     let view = nilView(text: "watchlist")
                     cell.backgroundColor = .white
@@ -405,7 +442,57 @@ extension MainHomePageViewController: UICollectionViewDelegate, UICollectionView
             }
             return cell
         } else if collectionView == watchListCollection {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "1234", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "123", for: indexPath)
+            cell.subviews.forEach { $0.removeFromSuperview() }
+            cell.backgroundColor = UIColor(red: 250/255, green: 245/255, blue: 241/255, alpha: 1)
+            cell.layer.cornerRadius = 24
+            cell.clipsToBounds = true
+            
+            let home = sortedHomeArr[indexPath.row]
+            
+            let imageView = UIImageView(image: UIImage(data: home.photos.first ?? Data()))
+            cell.addSubview(imageView)
+            imageView.snp.makeConstraints { make in
+                make.left.right.top.equalToSuperview()
+                make.bottom.equalTo(cell.snp.centerY)
+            }
+            
+            let likeButton = UIButton(type: .system)
+            likeButton.setBackgroundImage(.likeBut, for: .normal)
+            cell.addSubview(likeButton)
+            likeButton.snp.makeConstraints { make in
+                make.right.top.equalToSuperview().inset(15)
+                make.height.width.equalTo(30)
+            }
+            likeButton.tapPublisher
+                .sink { _ in
+                    self.dislikeHome(index: indexPath.row)
+                }
+                .store(in: &cancellable)
+            
+            let nameLabel = UILabel()
+            nameLabel.text = sortedHomeArr[indexPath.row].name
+            nameLabel.textColor = .black.withAlphaComponent(0.7)
+            nameLabel.font = .systemFont(ofSize: 15, weight: .semibold)
+            nameLabel.textAlignment = .left
+            nameLabel.numberOfLines = 2
+            cell.addSubview(nameLabel)
+            nameLabel.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().inset(10)
+                make.top.equalTo(imageView.snp.bottom).inset(-10)
+            }
+            
+            let countLabel = UILabel()
+            countLabel.text = home.price
+            countLabel.textColor = .black
+            countLabel.textAlignment = .left
+            countLabel.font = .systemFont(ofSize: 17, weight: .bold)
+            cell.addSubview(countLabel)
+            countLabel.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().inset(10)
+                make.bottom.equalToSuperview().inset(10)
+            }
+            
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "3", for: indexPath)
@@ -507,5 +594,11 @@ extension MainHomePageViewController: UICollectionViewDelegate, UICollectionView
         }
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == watchListCollection {
+            openDetailVC(index: indexPath.row)
+        }
+    }
     
 }

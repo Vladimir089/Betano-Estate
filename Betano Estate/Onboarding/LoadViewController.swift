@@ -20,7 +20,7 @@ class LoadViewController: UIViewController {
     }
     
     func settingsTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0, repeats: false, block: { [self] _ in //поменять тайминтервал на 7
+        timer = Timer.scheduledTimer(withTimeInterval: 7, repeats: false, block: { [self] _ in //поменять тайминтервал на 7
             timer.invalidate()
             if isBet == false {
                 if UserDefaults.standard.value(forKey: "tab") != nil {

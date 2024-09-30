@@ -13,7 +13,7 @@ class TabBarViewController: UITabBarController {
     
     var propertiesPage = PropertiesViewController()
     var homePage = MainHomePageViewController()
-    
+    var settingsPage = SettingsViewController()
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,16 +46,19 @@ class TabBarViewController: UITabBarController {
     
     func setVC() {
         
-        let propertiesVCTabItem = UITabBarItem(title: nil, image: .properties.resize(targetSize: CGSize(width: 27, height: 27)), tag: 0)
+        let propertiesVCTabItem = UITabBarItem(title: nil, image: .properties.resize(targetSize: CGSize(width: 30, height: 30)), tag: 0)
         propertiesPage.tabBarItem = propertiesVCTabItem
         
         
         let homeVCTabItem = UITabBarItem(title: nil, image: .home.resize(targetSize: CGSize(width: 24, height: 24)), tag: 0)
         homePage.tabBarItem = homeVCTabItem
+        
+        let settingsVCTabItem = UITabBarItem(title: nil, image: .settings.resize(targetSize: CGSize(width: 24, height: 24)), tag: 0)
+        settingsPage.tabBarItem = settingsVCTabItem
 
         homePage.watchListPubliser = propertiesPage.watchListPubliser
 
-        viewControllers = [UINavigationController(rootViewController: homePage), UINavigationController(rootViewController: propertiesPage)]
+        viewControllers = [UINavigationController(rootViewController: homePage), UINavigationController(rootViewController: propertiesPage), UINavigationController(rootViewController: settingsPage)]
         
         hideTitle()
     }

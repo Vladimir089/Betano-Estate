@@ -23,6 +23,8 @@
 		1510DBDD2CA5E5BC00AF18C8 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBDC2CA5E5BC00AF18C8 /* AddTransactionViewController.swift */; };
 		1510DBE02CA6DDE200AF18C8 /* PropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBDF2CA6DDE200AF18C8 /* PropertiesViewController.swift */; };
 		1510DBE22CA83E1900AF18C8 /* AddNewPropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBE12CA83E1900AF18C8 /* AddNewPropertyViewController.swift */; };
+		1510DBE42CAABC4400AF18C8 /* DetailPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBE32CAABC4300AF18C8 /* DetailPropertiesViewController.swift */; };
+		1510DBE72CAAED0A00AF18C8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510DBE62CAAED0A00AF18C8 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		1510DBDC2CA5E5BC00AF18C8 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		1510DBDF2CA6DDE200AF18C8 /* PropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewController.swift; sourceTree = "<group>"; };
 		1510DBE12CA83E1900AF18C8 /* AddNewPropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPropertyViewController.swift; sourceTree = "<group>"; };
+		1510DBE32CAABC4300AF18C8 /* DetailPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPropertiesViewController.swift; sourceTree = "<group>"; };
+		1510DBE62CAAED0A00AF18C8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		1510DBB02CA5A09300AF18C8 /* Betano Estate */ = {
 			isa = PBXGroup;
 			children = (
+				1510DBE52CAAE7B800AF18C8 /* Settings */,
 				1510DBDE2CA6DDCB00AF18C8 /* Properties */,
 				1510DBD52CA5B0D400AF18C8 /* HomePage */,
 				1510DBD22CA5B02900AF18C8 /* TabBar */,
@@ -139,8 +144,17 @@
 			children = (
 				1510DBDF2CA6DDE200AF18C8 /* PropertiesViewController.swift */,
 				1510DBE12CA83E1900AF18C8 /* AddNewPropertyViewController.swift */,
+				1510DBE32CAABC4300AF18C8 /* DetailPropertiesViewController.swift */,
 			);
 			path = Properties;
+			sourceTree = "<group>";
+		};
+		1510DBE52CAAE7B800AF18C8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1510DBE62CAAED0A00AF18C8 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +242,11 @@
 				1510DBE22CA83E1900AF18C8 /* AddNewPropertyViewController.swift in Sources */,
 				1510DBD42CA5B04400AF18C8 /* TabBarViewController.swift in Sources */,
 				1510DBD72CA5B10200AF18C8 /* MainHomePageViewController.swift in Sources */,
+				1510DBE42CAABC4400AF18C8 /* DetailPropertiesViewController.swift in Sources */,
 				1510DBB42CA5A09300AF18C8 /* SceneDelegate.swift in Sources */,
 				1510DBDD2CA5E5BC00AF18C8 /* AddTransactionViewController.swift in Sources */,
 				1510DBD92CA5B7E300AF18C8 /* HomeModels.swift in Sources */,
+				1510DBE72CAAED0A00AF18C8 /* SettingsViewController.swift in Sources */,
 				1510DBDB2CA5CD2C00AF18C8 /* EditCurrentBalanceViewController.swift in Sources */,
 				1510DBE02CA6DDE200AF18C8 /* PropertiesViewController.swift in Sources */,
 			);
@@ -386,7 +402,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Betano Estate/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Benato Estate";
+				INFOPLIST_KEY_CFBundleDisplayName = "BNT Estate";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -417,7 +433,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Betano Estate/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Benato Estate";
+				INFOPLIST_KEY_CFBundleDisplayName = "BNT Estate";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
