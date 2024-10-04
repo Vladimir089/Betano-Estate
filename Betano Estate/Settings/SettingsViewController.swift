@@ -113,7 +113,7 @@ class SettingsViewController: UIViewController {
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
         } else {
-            if let url = URL(string: "id") {
+            if let url = URL(string: "https://apps.apple.com/us/app/bnt-estate/id6736412744") {
                 if UIApplication.shared.canOpenURL(url) {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
@@ -122,7 +122,7 @@ class SettingsViewController: UIViewController {
     }
     
     private func shareApps() {
-        let appURL = URL(string: "id")!
+        let appURL = URL(string: "https://apps.apple.com/us/app/bnt-estate/id6736412744")!
         let activityViewController = UIActivityViewController(activityItems: [appURL], applicationActivities: nil)
         
         // Настройка для показа в виде popover на iPad
@@ -137,7 +137,7 @@ class SettingsViewController: UIViewController {
     
     private func policy() {
         let webVC = WebViewController()
-        webVC.urlString = "pol"
+        webVC.urlString = "https://www.termsfeed.com/live/e23f9923-03db-46bd-a32b-a48e367183e1"
         present(webVC, animated: true, completion: nil)
     }
 }

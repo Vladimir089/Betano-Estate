@@ -40,13 +40,8 @@ class MainHomePageViewController: UIViewController {
         let backButton = UIBarButtonItem()
         backButton.title = ""
         navigationItem.backBarButtonItem = backButton
-        
-        
     }
     
-   
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -87,8 +82,6 @@ class MainHomePageViewController: UIViewController {
                 print("Home publicher is work")
             }
             .store(in: &cancellable)
-        
-       // watchListPubliser?.send(0) при снятии лайка с недвиги
         
         transactionPublisher
             .sink { items in
